@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<window Project="Quora">
+    <url> https://www.quora.com </url>
+    <title>Quora - The best answer to any question</title>
+    <login n="3">
+        <id name="Google">
+            <click type="class" val="google_button_text"></click>
+        </id>
+        <id name="Facebook">
+            <click type="class" val="facebook_button_text"></click>
+        </id>
+        <id name="Default">
+            <input1 type="name" val="email">vinayd.1414@gmail.com</input1>
+            <input2 type="name" val="password">dharmachar14</input2>
+            <click type="type" val="Login"></click>
+        </id>
+    </login>
+</window>
+
+<!--
+
+        <logins name="Google">
+            <value>google_button_text</value>
+        </logins>
+        <logins name="Facebook">
+            <value>FB Login</value>
+        </logins>
+        <logins name="Twitter">
+            <value>Twitter Login</value>
+        </logins>
+        <logins name="Default">
+            <value>Default login</value>
+        </logins>
+
+
+-->

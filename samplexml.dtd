@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<window project="Quora">
+    <cases>
+        <one>1 2</one>
+        <two>1 3</two>
+        <three>1 4</three>
+    </cases>
+    <data test="test">
+        <block n="1" desc="url">
+            <url data="https://www.quora.com" n="1"></url>
+            <true>
+                <title>
+                    Quora - The best answer to any question
+                </title>
+            </true>
+        </block>
+
+        <block n="2" desc="gmail">
+            <click type="class" val="google_button_text"></click>
+            <true>
+                <title>
+                    Sign in - Google Accounts
+                </title>
+            </true>
+        </block>
+
+        <block n="3" desc="facebook">
+            <click type="class" val="facebook_button_text"></click>
+            <true>
+                <title>
+                    Facebook
+                </title>
+            </true>
+        </block>
+
+        <block n="4" desc="default">
+            <text type="" val=""> </text>
+            <pass type="" val=""> </pass>
+            <click type="" val=""></click>
+        </block>
+    </data>
+</window>

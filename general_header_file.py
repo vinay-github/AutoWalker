@@ -1,8 +1,9 @@
  
 IE ="Ie"
+IE_PATH="C:\Temp\src\IEDriverServer_x64\IEDriverServer"
 CHROME = "Chrome"
 FIREFOX = "firefox"
-INDEX = "http://hackerrank.com/"
+INDEX = "http://google.com/"
 CASES="cases"
 CONTENT="data"
 
@@ -12,3 +13,5 @@ TEXT="text"
 PASSWORD="pwd"
 DROPDOWN="dropdown"
 TRUE="true"
+ID="id"
+NAME="name"

@@ -7,16 +7,18 @@
     </cases>
     <data test="test">
         <block n="1" desc="url">
-            <url data="https://www.quora.com" n="1"></url>
+            <url data="https://www.facebook.com"></url>
             <true>
                 <title>
-                    Quora - The best answer to any question
+                    Facebook - Log In or Sign Up
                 </title>
             </true>
         </block>
 
-        <block n="2" desc="gmail">
-            <click type="class" val="google_button_text"></click>
+        <block n="2" desc="email_login">
+            <text type="id" val="email">vinayd.1414@gmail.com</text>
+            <pwd type="id" val="pass">password</pwd>
+            <click type="id" val="loginbutton"></click>
             <true>
                 <title>
                     Sign in - Google Accounts

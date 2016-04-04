@@ -1,7 +1,6 @@
 from selenium import webdriver
 from general_header_file import *
 from lxml import etree
-from io import StringIO
 
 class mylibs:
 
@@ -15,9 +14,8 @@ class mylibs:
         if self.main_obj.selected_browser == IE:
             self.main_obj.browser=webdriver.Ie(self.main_obj.ie_driver)
             print(self.main_obj.browser.get(INDEX))
-
         elif self.main_obj.selected_browser == CHROME:
-            webdriver.Chrome(self.main_obj.ie_driver).get(INDEX)
+            self.main_obj.browser=webdriver.Chrome(self.main_obj.chrome_driver)
 
     '''
         Function returns root of the xml file
@@ -42,12 +40,13 @@ class mylibs:
                 if child.tag == CONTENT:
                     for subchild in child:
                         self.main_obj.blocks[self.main_obj.no_blocks]=subchild
-                        self.main_obj.no_blocks+=1
-                        print(subchild.get("n" and "desc") if subchild.attrib else subchild.text)
+                        for asserts in subchild:
+                            if asserts.tag == TRUE:
+                                self.main_obj.asserts[self.main_obj.no_blocks]=asserts
+                        self.main_obj.no_blocks += 1
                 elif child.tag == CASES:
                     for subchild in child:
                         self.main_obj.cases[self.main_obj.no_cases]=subchild
-                        print(subchild.text)
                         self.main_obj.no_cases+=1
 
     def url_access(self,root,main_obj):
@@ -109,6 +108,55 @@ class mylibs:
             elif subroot.tag == PASSWORD:
                 #call password entering function
                 self.password_entry(subroot,self.main_obj)
+'''
+    def asserts_check(self,root,main_obj):
+        self.root=root
+        self.main_obj=main_obj
+        assert_obj=unittests()
+        for subchild in root:
+            if subchild.tag == TITLE:
+                #self.check_title(subchild,main_obj)
+                assert_obj.assertIn(self.root.text, self.main_obj.browser.title)
+            #print(subchild.tag,"--" ,subchild.text)
+
+    def check_title(self,root,main_obj):
+
+        self.root=root
+        self.main_obj=main_obj
+        #print("Text -",self.root.text)
+        #print("Browser title -",self.main_obj.browser.title)
+        #if self.root.text == self.main_obj.browser.title:
+        #    print(self.main_obj.browser.title)
+        self.assertIn(self.root.text,self.main_obj.browser.title)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 '''
 

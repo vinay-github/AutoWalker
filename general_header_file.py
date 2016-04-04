@@ -1,7 +1,8 @@
- 
+
 IE ="Ie"
 IE_PATH="C:\Temp\src\IEDriverServer_x64\IEDriverServer"
 CHROME = "Chrome"
+CHROME_PATH="C:\Temp\src\chromedriver_win32\chromedriver"
 FIREFOX = "firefox"
 INDEX = "http://google.com/"
 CASES="cases"
@@ -15,3 +16,5 @@ DROPDOWN="dropdown"
 TRUE="true"
 ID="id"
 NAME="name"
+DELIMITER=">"
+TITLE="title"

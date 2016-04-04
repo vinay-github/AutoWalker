@@ -9,9 +9,7 @@
         <block n="1" desc="url">
             <url data="https://www.facebook.com"></url>
             <true>
-                <title>
-                    Facebook - Log In or Sign Up
-                </title>
+                <title>Facebook - Log In or Sign Up</title>
             </true>
         </block>
 
@@ -19,24 +17,23 @@
             <text type="id" val="email">vinayd.1414@gmail.com</text>
             <pwd type="id" val="pass">password</pwd>
             <click type="id" val="loginbutton"></click>
-            <true>
-                <title>
-                    Sign in - Google Accounts
-                </title>
-            </true>
+            <true>Facebook - Log In or Sign Up</true>
         </block>
 
         <block n="3" desc="facebook">
             <click type="id" val="u_0_w"></click>
             <true>
-                <title>
-                    Facebook
-                </title>
+                <title>Facebook</title>
             </true>
         </block>
 
         <block n="4" desc="default">
             <click type="id" val="u_0_j"></click>
+            <true>
+                <title>
+                    Facebook
+                </title>
+        </true>
         </block>
     </data>
 </window>
